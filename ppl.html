@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Praktik Pengalaman Lapangan (PPL) – E-Portofolio PPG</title>
+  <meta name="description" content="Dokumentasi Praktik Pengalaman Lapangan (PPL) Dwiki Darma Saputra" />
+  <link rel="icon" href="unwidha_logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-wrapper { padding-top: 132px; padding-bottom: 60px; min-height: 100vh; }
+    .art-header { text-align: center; padding: 60px 24px 40px; animation: artFadeUp .7s ease both; }
+    .art-badge { display: inline-block; background: linear-gradient(135deg, var(--purple-main), #6d28d9); color: #fff; font-size: .78rem; font-weight: 700; padding: 8px 22px; border-radius: 50px; letter-spacing: .8px; text-transform: uppercase; margin-bottom: 20px; }
+    .art-title { font-family: 'Inter', sans-serif; font-weight: 900; font-size: clamp(2rem, 5vw, 3.2rem); color: var(--gray-900); margin-bottom: 16px; line-height: 1.15; }
+    .art-title .text-gradient { background: linear-gradient(135deg, var(--purple-main), #a855f7, #6d28d9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .art-subtitle { font-size: 1rem; color: var(--gray-600); max-width: 640px; margin: 0 auto; line-height: 1.7; }
+    @keyframes artFadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 820px; margin: 0 auto 40px; padding: 0 24px; animation: artFadeUp .7s ease .2s both; }
+    .bento-item { display: flex; align-items: center; gap: 14px; background: #fff; border: 1px solid var(--gray-200); border-radius: 16px; padding: 18px 20px; transition: var(--transition); box-shadow: 0 2px 12px rgba(0,0,0,.04); }
+    .bento-item:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--purple-light); }
+    .bento-item .bento-icon { width: 44px; height: 44px; background: var(--purple-pale); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; }
+    .bento-item label { font-size: .72rem; font-weight: 600; color: var(--gray-600); text-transform: uppercase; letter-spacing: .5px; }
+    .bento-item h3 { font-size: .92rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0px; margin-top: 2px; }
+    .section-divider { border: none; height: 1px; background: linear-gradient(90deg, transparent, var(--purple-light), transparent); max-width: 600px; margin: 32px auto; }
+    .tabs-container { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; padding: 0 24px; margin-bottom: 48px; animation: artFadeUp .7s ease .4s both; }
+    .tab-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border: 2px solid var(--gray-200); border-radius: 50px; background: #fff; color: var(--gray-700); font-family: 'Inter', sans-serif; font-size: .85rem; font-weight: 600; cursor: pointer; transition: all .25s ease; }
+    .tab-btn:hover { border-color: var(--purple-light); color: var(--purple-main); background: var(--purple-pale); }
+    .tab-btn.active { background: linear-gradient(135deg, var(--purple-main), #6d28d9); color: #fff; border-color: transparent; box-shadow: 0 4px 20px rgba(124,58,237,.35); }
+    .tab-btn .tab-icon { font-size: 1rem; }
+    .tab-content { display: none; animation: tabFade .4s ease; }
+    .tab-content.active { display: block; }
+    @keyframes tabFade { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    .section-title { text-align: center; margin-bottom: 40px; }
+    .section-title h2 { font-family: 'Inter', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 4vw, 2.2rem); color: var(--gray-900); margin-bottom: 12px; }
+    .section-title p { font-size: .95rem; color: var(--gray-600); max-width: 600px; margin: 0 auto; line-height: 1.65; }
+    .scouting-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto 48px; padding: 0 24px; }
+    .scout-card { background: #fff; border-radius: 20px; border: 1px solid var(--gray-200); overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,.05); transition: var(--transition); display: flex; flex-direction: column; }
+    .scout-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(124,58,237,.15); }
+    .scout-header { padding: 22px 24px; display: flex; align-items: center; gap: 12px; color: #fff; }
+    .scout-header .scout-icon { font-size: 1.5rem; }
+    .scout-header h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0px; }
+    .bg-gradient-blue { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+    .bg-gradient-purple { background: linear-gradient(135deg, var(--purple-main), #6d28d9); }
+    .bg-gradient-cyan { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+    .scout-body { padding: 20px 24px; flex: 1; }
+    .scout-list { list-style: none; display: flex; flex-direction: column; gap: 16px; padding: 0; margin: 0; }
+    .scout-list li { display: flex; gap: 12px; align-items: flex-start; }
+    .scout-list li .s-icon { font-size: 1rem; margin-top: 2px; flex-shrink: 0; color: #22c55e; }
+    .scout-list li .s-icon.warn { color: #f97316; }
+    .scout-list li strong { display: block; font-size: .85rem; font-weight: 700; color: var(--gray-900); margin-bottom: 2px; }
+    .scout-list li span { font-size: .82rem; color: var(--gray-600); line-height: 1.5; }
+    .scout-footer { padding: 14px 24px; border-top: 1px solid var(--gray-200); text-align: center; }
+    .scout-tag { display: inline-block; font-size: .75rem; font-weight: 700; color: var(--purple-main); background: var(--purple-pale); padding: 6px 16px; border-radius: 50px; }
+    .doc-card { background: #fff; border-radius: 24px; border: 1px solid var(--gray-200); overflow: hidden; max-width: 1200px; width: calc(100% - 48px); margin: 0 auto 40px; box-shadow: 0 4px 20px rgba(0,0,0,.06); transition: var(--transition); }
+    .doc-card:hover { box-shadow: 0 10px 30px rgba(124,58,237,.1); }
+    .doc-title { display: flex; align-items: center; gap: 12px; padding: 20px 24px; font-size: 1.15rem; font-weight: 700; color: var(--gray-900); }
+    .doc-title .doc-icon { display: inline-flex; align-items: center; color: #ef4444; font-size: 1.3rem; }
+    .dashed-divider { border: none; border-top: 2px dashed var(--gray-200); margin: 0 20px; }
+    .pdf-container { background: #2b2b36; margin: 0 24px 24px; border-radius: 14px; overflow: hidden; height: 750px; display: flex; align-items: center; justify-content: center; box-shadow: inset 0 2px 10px rgba(0,0,0,.35); border: 1px solid rgba(255,255,255,.08); }
+    .pdf-container iframe { width: 100%; height: 100%; border: none; }
+    .pdf-landscape { height: 750px; }
+    @media (max-width: 900px) { .pdf-landscape { height: 600px; } }
+    @media (max-width: 600px) { .pdf-landscape { height: 440px; } }
+    .pdf-placeholder { text-align: center; color: rgba(255,255,255,.65); padding: 48px 24px; }
+    .pdf-placeholder .ph-icon { font-size: 3.5rem; margin-bottom: 16px; display: block; opacity: .85; }
+    .pdf-placeholder p { font-size: .95rem; line-height: 1.6; }
+    .pdf-actions { display: flex; gap: 16px; justify-content: center; align-items: center; padding: 6px 20px 28px; flex-wrap: wrap; }
+    .btn-modern { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 32px; border-radius: 50px; font-family: 'Inter', sans-serif; font-size: .9rem; font-weight: 600; text-decoration: none; transition: all .25s ease; cursor: pointer; }
+    .btn-main { background: linear-gradient(135deg, var(--purple-main), #6d28d9); color: #fff; border: 2px solid transparent; box-shadow: 0 4px 18px rgba(124,58,237,.35); }
+    .btn-main:hover { transform: translateY(-2px); box-shadow: 0 8px 26px rgba(124,58,237,.5); }
+    .btn-sub { background: #fff; color: var(--purple-main); border: 2px solid var(--purple-main); box-shadow: 0 2px 10px rgba(0,0,0,.04); }
+    .btn-sub:hover { background: var(--purple-pale); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(124,58,237,.15); }
+    .analysis-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto 48px; padding: 0 24px; }
+    .analysis-card { position: relative; background: #fff; border-radius: 20px; border: 1px solid var(--gray-200); padding: 28px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,.05); transition: var(--transition); }
+    .analysis-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(124,58,237,.15); }
+    .ac-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+    .ac-icon { width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: #fff; flex-shrink: 0; }
+    .ac-icon.bg-blue { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+    .ac-icon.bg-purple { background: linear-gradient(135deg, var(--purple-main), #6d28d9); }
+    .ac-icon.bg-cyan { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+    .ac-icon.bg-orange { background: linear-gradient(135deg, #f97316, #ea580c); }
+    .ac-header h3 { font-size: 1rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0px; }
+    .analysis-card p { font-size: .88rem; color: var(--gray-600); line-height: 1.7; }
+    .zigzag-section { max-width: 1000px; margin: 0 auto; padding: 0 24px 40px; }
+    .zigzag-row { display: flex; align-items: center; gap: 48px; margin-bottom: 48px; }
+    .zigzag-row.reverse { flex-direction: row-reverse; }
+    .zz-visual { flex: 0 0 160px; }
+    .zz-card-3d { width: 140px; height: 140px; border-radius: 24px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,.15); }
+    .zz-card-3d .zz-inner { font-size: 2.5rem; animation: floatIcon 3s ease-in-out infinite; }
+    @keyframes floatIcon { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .bg-orange-glow { background: linear-gradient(135deg, #fb923c, #ea580c); }
+    .bg-purple-glow { background: linear-gradient(135deg, var(--purple-light), #6d28d9); }
+    .bg-blue-glow { background: linear-gradient(135deg, #60a5fa, #1d4ed8); }
+    .bg-cyan-glow { background: linear-gradient(135deg, #22d3ee, #0891b2); }
+    .zz-content { flex: 1; }
+    .zz-number { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: var(--purple-pale); color: var(--purple-main); font-weight: 800; font-size: .95rem; border-radius: 10px; margin-bottom: 12px; }
+    .zz-content h3 { font-size: 1.2rem; font-weight: 800; color: var(--gray-900); margin-bottom: 10px; }
+    .zz-content p { font-size: .9rem; color: var(--gray-600); line-height: 1.7; }
+    @media (max-width: 900px) {
+      .doc-card { width: calc(100% - 32px); } .doc-title { padding: 18px 16px; font-size: 1.05rem; } .dashed-divider { margin: 0 14px; } .pdf-container { height: 600px; margin: 14px 10px 18px; border-radius: 12px; } .pdf-actions { padding: 6px 14px 22px; } .bento-grid { grid-template-columns: 1fr; max-width: 400px; } .scouting-grid { grid-template-columns: 1fr; max-width: 500px; } .analysis-grid { grid-template-columns: 1fr; } .zigzag-row, .zigzag-row.reverse { flex-direction: column; text-align: center; } .zz-visual { flex: 0 0 auto; }
+    }
+    @media (max-width: 600px) {
+      .art-header { padding: 40px 16px 28px; } .doc-card { width: calc(100% - 20px); border-radius: 18px; } .doc-title { padding: 14px 14px; font-size: .95rem; gap: 8px; } .dashed-divider { margin: 0 10px; } .pdf-container { height: 440px; margin: 12px 8px 16px; border-radius: 10px; } .pdf-actions { padding: 6px 10px 18px; gap: 10px; } .btn-modern { padding: 11px 22px; font-size: .84rem; width: 100%; max-width: 280px; }
+    }
+      /* ===== GALLERY GRID ===== */
+    .gallery-title {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .gallery-title h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 1.6rem;
+      color: var(--gray-900);
+      margin: 0;
+    }
+    .gallery-masonry {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 220px);
+      gap: 16px;
+      max-width: 1200px;
+      margin: 0 auto 48px;
+      padding: 0 24px;
+      width: calc(100% - 48px);
+    }
+    .gallery-item {
+      background: #2b2b36;
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px dashed rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.7);
+      transition: var(--transition);
+      box-shadow: inset 0 2px 10px rgba(0,0,0,.35);
+    }
+    .gallery-item:hover {
+      background: #363644;
+      border-color: var(--purple-light);
+      color: #fff;
+    }
+    .gallery-item .ph-icon { font-size: 2.5rem; margin-bottom: 12px; opacity: 0.8; }
+    .gallery-item p { font-size: 0.9rem; font-weight: 500; margin: 0; }
+    
+    .gi-1 { grid-column: span 2; grid-row: span 1; }
+    .gi-2 { grid-column: span 1; grid-row: span 1; }
+    .gi-3 { grid-column: span 1; grid-row: span 1; }
+    .gi-4 { grid-column: span 3; grid-row: span 1; }
+    .gi-5 { grid-column: span 1; grid-row: span 1; }
+
+    @media (max-width: 900px) {
+      .gallery-masonry { grid-template-rows: repeat(2, 180px); width: calc(100% - 32px); }
+    }
+    @media (max-width: 600px) {
+      .gallery-masonry {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: calc(100% - 20px);
+      }
+      .gallery-item {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+        height: 180px;
+      }
+    }
+
+    /* ===== VIDEO PEMBELAJARAN SHOWCASE ===== */
+    .video-showcase-card {
+      background: #fff;
+      border-radius: 24px;
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      max-width: 1200px;
+      width: calc(100% - 48px);
+      margin: 0 auto 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,.06);
+      transition: var(--transition);
+      padding: 24px;
+    }
+    .video-showcase-card:hover {
+      box-shadow: 0 10px 30px rgba(124,58,237,.1);
+    }
+    .video-showcase-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1.5px dashed var(--gray-200);
+    }
+    .video-showcase-header .vsh-icon {
+      font-size: 1.5rem;
+      color: #ef4444;
+    }
+    .video-showcase-header h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin: 0;
+    }
+    .video-showcase-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+    .video-player-pane {
+      display: flex;
+      flex-direction: column;
+    }
+    .video-player-wrap {
+      background: #1e1e24;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 2px 10px rgba(0,0,0,.45);
+      border: 1px solid rgba(255,255,255,.08);
+      cursor: pointer;
+    }
+    .video-player-wrap iframe,
+    .video-player-wrap video {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .video-player-placeholder {
+      text-align: center;
+      color: rgba(255,255,255,.85);
+      padding: 20px;
+    }
+    .video-play-btn {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--purple-main), #6d28d9);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      color: #fff;
+      font-size: 1.5rem;
+      box-shadow: 0 6px 20px rgba(124,58,237,.5);
+      transition: transform .25s ease;
+    }
+    .video-player-wrap:hover .video-play-btn {
+      transform: scale(1.1);
+    }
+    .video-player-placeholder p {
+      font-size: 0.88rem;
+      margin: 0;
+      color: rgba(255,255,255,.75);
+    }
+    .video-caption {
+      font-size: 0.82rem;
+      color: var(--gray-600);
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-style: italic;
+    }
+    .video-desc-pane {
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      border-left: 4px solid var(--purple-main);
+      border-radius: 16px;
+      padding: 22px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .video-desc-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--purple-main);
+      background: var(--purple-pale);
+      padding: 4px 12px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-bottom: 10px;
+      align-self: flex-start;
+    }
+    .video-desc-pane h4 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--gray-900);
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+    .video-desc-pane p {
+      font-size: 0.88rem;
+      color: var(--gray-700);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .video-desc-pane p:last-child {
+      margin-bottom: 0;
+    }
+    .video-key-points {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .video-key-points li {
+      font-size: 0.83rem;
+      color: var(--gray-700);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.5;
+    }
+    .video-key-points li .vk-bullet {
+      color: var(--purple-main);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 900px) {
+      .video-showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .video-showcase-card {
+        padding: 20px;
+        width: calc(100% - 32px);
+      }
+    }
+    @media (max-width: 600px) {
+      .video-showcase-card {
+        width: calc(100% - 20px);
+        padding: 16px;
+      }
+      .video-desc-pane {
+        padding: 18px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="E-Portofolio PPG">
+        <img src="unwidha_logo.png" alt="Logo Universitas Widya Dharma" class="unwidha-logo-img" />
+        <span class="nav-brand-text">
+          <span class="brand-eporto">E-Portofolio</span><span class="brand-ppg"> PPG</span>
+        </span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-dropdown-toggle nav-active" id="eporto-sem2-toggle">E-Portofolio Semester 2 <span class="nav-arrow">&#9662;</span></a>
+          <ul class="nav-dropdown-menu" id="eporto-sem2-menu">
+            <li><a href="seminar-ppg.html"><span>🎓</span> Refleksi PPG Semester 1</a></li>
+            <li><a href="seminar-ppg-2.html"><span>🎓</span> Refleksi PPG Semester 2</a></li>
+            <li><a href="ppl.html" class="nav-active"><span>🏫</span> Praktik Pengalaman Lapangan (PPL)</a></li>
+            <li><a href="seminar-ppg-3.html"><span>🎤</span> Seminar PPG</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-dropdown-toggle" id="eporto1-toggle">E-Portofolio (1) <span class="nav-arrow">&#9662;</span></a>
+          <ul class="nav-dropdown-menu" id="eporto1-menu">
+            <li><a href="artefak-produk.html"><span>📦</span> Artefak Produk</a></li>
+            <li><a href="penilaian-gp.html"><span>⭐</span> Penilaian GP</a></li>
+            <li><a href="model-guru.html"><span>👨‍🏫</span> Model Guru</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-dropdown-toggle" id="eporto2-toggle">E-Portofolio (2) <span class="nav-arrow">&#9662;</span></a>
+          <ul class="nav-dropdown-menu" id="eporto2-menu">
+            <li><a href="refleksi.html"><span>📖</span> Refleksi Akhir</a></li>
+            <li><a href="filosofi-mengajar.html"><span>💡</span> Filosofi Mengajar</a></li>
+          </ul>
+        </li>
+        <li><a href="dokumentasi.html">Dokumentasi</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap" id="ticker-bar" aria-label="Highlight Pembelajaran">
+    <div class="ticker-track">
+      <span class="ticker-item"><span class="ticker-emoji">✨</span>Pembelajaran Berdiferensiasi</span>
+      <span class="ticker-dot">★</span>
+      <span class="ticker-item"><span class="ticker-emoji">🚀</span>Pembelajaran Berbasis UbD</span>
+      <span class="ticker-dot">★</span>
+      <span class="ticker-item"><span class="ticker-emoji">🎨</span>Inovasi Media Pembelajaran</span>
+      <span class="ticker-dot">★</span>
+      <span class="ticker-item"><span class="ticker-emoji">🌐</span>Literasi Digital</span>
+      <span class="ticker-dot">★</span>
+      <span class="ticker-item"><span class="ticker-emoji">✨</span>Pembelajaran Berdiferensiasi</span>
+      <span class="ticker-dot">★</span>
+      <span class="ticker-item"><span class="ticker-emoji">🚀</span>Pembelajaran Berbasis UbD</span>
+      <span class="ticker-dot">★</span>
+      <span class="ticker-item"><span class="ticker-emoji">🎨</span>Inovasi Media Pembelajaran</span>
+      <span class="ticker-dot">★</span>
+      <span class="ticker-item"><span class="ticker-emoji">🌐</span>Literasi Digital</span>
+      <span class="ticker-dot">★</span>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="page-wrapper">
+
+        <!-- PAGE HEADER -->
+    <div class="art-header">
+      <span class="art-badge">Pengalaman Lapangan</span>
+      <h1 class="art-title">Praktik Pengalaman Lapangan <span class="text-gradient">(PPL)</span></h1>
+      <p class="art-subtitle">Dokumentasi dan refleksi komprehensif pelaksanaan Praktik Pengalaman Lapangan, mulai dari tahap observasi, perancangan modul ajar, hingga praktik mengajar mandiri.</p>
+    </div>
+
+    <!-- BENTO INFO -->
+    <div class="bento-grid">
+      <div class="bento-item">
+        <div class="bento-icon">🏛️</div>
+        <div>
+          <label>Mitra LPTK</label>
+          <h3>Universitas Widya Dharma</h3>
+        </div>
+      </div>
+      <div class="bento-item">
+        <div class="bento-icon">📖</div>
+        <div>
+          <label>Linear Jurusan</label>
+          <h3>Pendidikan Pancasila</h3>
+        </div>
+      </div>
+      <div class="bento-item">
+        <div class="bento-icon">🎓</div>
+        <div>
+          <label>Penyusun</label>
+          <h3>Dwiki Darma Saputra</h3>
+        </div>
+      </div>
+    </div>
+
+    <hr class="section-divider" />
+
+    <!-- TAB NAVIGATION -->
+    <div class="tabs-container" id="tabs-container">
+      <button class="tab-btn active" data-tab="tab-observasi" onclick="openTab(event, 'tab-observasi')">
+        <span class="tab-icon">🔍</span> Observasi
+      </button>
+      <button class="tab-btn" data-tab="tab-siklus1" onclick="openTab(event, 'tab-siklus1')">
+        <span class="tab-icon">📝</span> Praktik Pembelajaran Mandiri Siklus 1
+      </button>
+      <button class="tab-btn" data-tab="tab-siklus2" onclick="openTab(event, 'tab-siklus2')">
+        <span class="tab-icon">🚀</span> Praktik Pembelajaran Mandiri Siklus 2
+      </button>
+      <button class="tab-btn" data-tab="tab-siklus3" onclick="openTab(event, 'tab-siklus3')">
+        <span class="tab-icon">💡</span> Praktik Pembelajaran Mandiri Siklus 3
+      </button>
+      <button class="tab-btn" data-tab="tab-siklus4" onclick="openTab(event, 'tab-siklus4')">
+        <span class="tab-icon">🎯</span> Praktik Pembelajaran Mandiri Siklus 4
+      </button>
+      <button class="tab-btn" data-tab="tab-uts" onclick="openTab(event, 'tab-uts')">
+        <span class="tab-icon">📋</span> Ujian Tengah Semester PPL
+      </button>
+      <button class="tab-btn" data-tab="tab-uas" onclick="openTab(event, 'tab-uas')">
+        <span class="tab-icon">🏆</span> Ujian Akhir Semester PPL
+      </button>
+    </div>
+
+    <!-- ===================== TAB: OBSERVASI ===================== -->
+    <section id="tab-observasi" class="tab-content active">
+      <div class="section-title">
+        <h2>Tahap <span class="text-gradient">Observasi</span></h2>
+        <p>Pengamatan mendalam terhadap lingkungan belajar, karakteristik peserta didik, dan manajemen sekolah sebagai fondasi pelaksanaan praktik mengajar.</p>
+      </div>
+      <div class="scouting-grid">
+        <div class="scout-card">
+          <div class="scout-header bg-gradient-blue">
+            <span class="scout-icon">🏫</span>
+            <h3>Lingkungan Sekolah</h3>
+          </div>
+          <div class="scout-body">
+            <ul class="scout-list">
+              <li><span class="s-icon">✅</span><div><strong>Fasilitas & Infrastruktur:</strong><span>Mengamati ketersediaan dan pemanfaatan fasilitas penunjang pembelajaran di sekolah mitra.</span></div></li>
+              <li><span class="s-icon">✅</span><div><strong>Iklim Sekolah:</strong><span>Menganalisis interaksi sosial dan budaya positif antar warga sekolah.</span></div></li>
+            </ul>
+          </div>
+          <div class="scout-footer"><span class="scout-tag">Fokus Observasi 1</span></div>
+        </div>
+        <div class="scout-card">
+          <div class="scout-header bg-gradient-purple">
+            <span class="scout-icon">👥</span>
+            <h3>Karakteristik Peserta Didik</h3>
+          </div>
+          <div class="scout-body">
+            <ul class="scout-list">
+              <li><span class="s-icon">✅</span><div><strong>Gaya Belajar:</strong><span>Mengidentifikasi preferensi belajar visual, auditori, atau kinestetik peserta didik.</span></div></li>
+              <li><span class="s-icon">✅</span><div><strong>Minat & Motivasi:</strong><span>Memetakan tingkat antusiasme dan faktor pendorong belajar siswa di kelas.</span></div></li>
+            </ul>
+          </div>
+          <div class="scout-footer"><span class="scout-tag">Fokus Observasi 2</span></div>
+        </div>
+        <div class="scout-card">
+          <div class="scout-header bg-gradient-cyan">
+            <span class="scout-icon">👨‍🏫</span>
+            <h3>Pelaksanaan Pembelajaran</h3>
+          </div>
+          <div class="scout-body">
+            <ul class="scout-list">
+              <li><span class="s-icon">✅</span><div><strong>Strategi Guru:</strong><span>Mengamati metode dan pendekatan yang diterapkan guru pamong saat mengajar.</span></div></li>
+              <li><span class="s-icon">✅</span><div><strong>Manajemen Kelas:</strong><span>Menganalisis cara guru mengelola dinamika dan kedisiplinan kelas.</span></div></li>
+            </ul>
+          </div>
+          <div class="scout-footer"><span class="scout-tag">Fokus Observasi 3</span></div>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-title"><span class="doc-icon">📄</span> Dokumen Observasi</div>
+        <hr class="dashed-divider" />
+        <div class="pdf-container">
+          <div class="pdf-placeholder"><span class="ph-icon">🔍</span><p>Dokumen Laporan Observasi akan ditampilkan di sini.</p></div>
+        </div>
+        <div class="pdf-actions">
+          <a href="#" download class="btn-modern btn-sub"><span>Unduh File</span></a>
+          <a href="#" target="_blank" class="btn-modern btn-main"><span>Buka Penuh</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TAB: SIKLUS 1 ===================== -->
+    <section id="tab-siklus1" class="tab-content">
+      <div class="section-title">
+        <h2>Praktik Pembelajaran Mandiri <span class="text-gradient">Siklus 1</span></h2>
+        <p>Pelaksanaan praktik mengajar perdana dengan menerapkan rencana pembelajaran yang telah disusun bersama dosen pembimbing dan guru pamong.</p>
+      </div>
+      <div class="analysis-grid">
+        <div class="analysis-card">
+          <div class="ac-header"><div class="ac-icon bg-blue">📝</div><h3>Perencanaan (Modul Ajar)</h3></div>
+          <p>Penyusunan perangkat pembelajaran yang terstruktur, mencakup tujuan, langkah kegiatan, dan asesmen yang disesuaikan dengan hasil observasi karakteristik peserta didik.</p>
+        </div>
+        <div class="analysis-card">
+          <div class="ac-header"><div class="ac-icon bg-purple">🎬</div><h3>Pelaksanaan Pembelajaran</h3></div>
+          <p>Implementasi Modul Ajar di kelas dengan fokus pada penguasaan materi, keterampilan membuka-menutup pelajaran, serta membangun interaksi positif dengan siswa.</p>
+        </div>
+        <div class="analysis-card">
+          <div class="ac-header"><div class="ac-icon bg-cyan">📊</div><h3>Asesmen & Evaluasi</h3></div>
+          <p>Pengumpulan data penilaian formatif selama proses pembelajaran untuk mengukur tingkat pemahaman siswa terhadap materi yang diajarkan.</p>
+        </div>
+        <div class="analysis-card">
+          <div class="ac-header"><div class="ac-icon bg-orange">🔄</div><h3>Refleksi Siklus 1</h3></div>
+          <p>Menganalisis kekuatan dan kelemahan dalam praktik mengajar perdana berdasarkan umpan balik dari guru pamong dan observasi diri sendiri.</p>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-title"><span class="doc-icon">📄</span> Dokumen Siklus 1</div>
+        <hr class="dashed-divider" />
+        <div class="pdf-container pdf-landscape">
+          <div class="pdf-placeholder"><span class="ph-icon">📝</span><p>Dokumen Siklus 1 akan ditampilkan di sini.</p></div>
+        </div>
+        <div class="pdf-actions">
+          <a href="#" download class="btn-modern btn-sub"><span>Unduh File</span></a>
+          <a href="#" target="_blank" class="btn-modern btn-main"><span>Buka Penuh</span></a>
+        </div>
+      </div>
+
+      <!-- VIDEO PEMBELAJARAN SIKLUS 1 -->
+      <div class="video-showcase-card">
+        <div class="video-showcase-header">
+          <span class="vsh-icon">🎬</span>
+          <h3>Video Pembelajaran Praktik Mengajar Mandiri Siklus 1</h3>
+        </div>
+        <div class="video-showcase-grid">
+          <div class="video-player-pane">
+            <div class="video-player-wrap">
+              <div class="video-player-placeholder">
+                <div class="video-play-btn">▶</div>
+                <p><strong>Video Rekaman Pembelajaran Siklus 1</strong><br><small>(Klik untuk memutar / tautan video)</small></p>
+              </div>
+            </div>
+            <div class="video-caption">
+              <span>📹</span> Video Pelaksanaan Pembelajaran Siklus 1 — Model Think-Pair-Share di SMA Negeri 1 Karangnongko
+            </div>
+          </div>
+          <div class="video-desc-pane">
+            <span class="video-desc-badge">Refleksi Pembelajaran Siklus 1</span>
+            <h4>Tradisi Gotong Royong sebagai Nilai Hidup Pancasila</h4>
+            <p>Pada pertemuan pertama di <strong>SMA Negeri 1 Karangnongko</strong>, pembelajaran diawali dengan apersepsi visual berupa tayangan tradisi gotong royong nusantara (<em>Marakka'bola, Sinoman,</em> dan <em>Ngayah</em>) serta tradisi lokal sekitar (<em>sambatan, rewang, kerja bakti</em>) guna mendekatkan konsep nilai luhur Pancasila dengan realitas kehidupan murid sebelum masa kemerdekaan.</p>
+            <ul class="video-key-points">
+              <li><span class="vk-bullet">✔</span><div><strong>Alur Kegiatan:</strong> Menerapkan sintaks <em>Think-Pair-Share</em> (Berpikir Mandiri, Diskusi Berpasangan, dan Berbagi di Depan Kelas) berbantuan LKPD terstruktur.</div></li>
+              <li><span class="vk-bullet">✔</span><div><strong>Capaian Keberhasilan:</strong> Murid antusias mengaitkan tradisi lingkungan sekitar dengan sila-sila Pancasila (terutama Sila ke-3) dan berani menyampaikan hasil diskusi.</div></li>
+              <li><span class="vk-bullet">💡</span><div><strong>Tindak Lanjut & Evaluasi:</strong> Memberikan pertanyaan penuntun yang menuntut argumentasi kritis serta memilih pasangan secara bergilir agar keaktifan kelas merata.</div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- GALLERY DOKUMENTASI -->
+      <div class="gallery-title">
+        <h3>Dokumentasi Kegiatan PPL</h3>
+      </div>
+      <div class="gallery-masonry">
+        <div class="gallery-item gi-1">
+          <span class="ph-icon">📸</span>
+          <p>Dokumentasi Kegiatan 1</p>
+        </div>
+        <div class="gallery-item gi-2">
+          <span class="ph-icon">👥</span>
+          <p>Interaksi Siswa</p>
+        </div>
+        <div class="gallery-item gi-3">
+          <span class="ph-icon">📝</span>
+          <p>Aktivitas Belajar</p>
+        </div>
+        <div class="gallery-item gi-4">
+          <span class="ph-icon">🏫</span>
+          <p>Dokumentasi Kelas Keseluruhan</p>
+        </div>
+        <div class="gallery-item gi-5">
+          <span class="ph-icon">🖼️</span>
+          <p>Hasil Karya</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TAB: SIKLUS 2 ===================== -->
+    <section id="tab-siklus2" class="tab-content">
+      <div class="section-title">
+        <h2>Praktik Pembelajaran Mandiri <span class="text-gradient">Siklus 2</span></h2>
+        <p>Pengembangan strategi mengajar dengan melakukan perbaikan-perbaikan kritis dari hasil refleksi pada siklus sebelumnya.</p>
+      </div>
+      <div class="analysis-grid">
+        <div class="analysis-card">
+          <div class="ac-header"><div class="ac-icon bg-blue">⚙️</div><h3>Perbaikan Perencanaan</h3></div>
+          <p>Menyesuaikan instrumen dan langkah pembelajaran pada Modul Ajar untuk mengatasi kendala yang muncul pada pelaksanaan siklus pertama.</p>
+        </div>
+        <div class="analysis-card">
+          <div class="ac-header"><div class="ac-icon bg-purple">🚀</div><h3>Implementasi Strategi Baru</h3></div>
+          <p>Menerapkan pendekatan pembelajaran yang lebih bervariasi untuk meningkatkan antusiasme dan partisipasi aktif peserta didik di kelas.</p>
+        </div>
+        <div class="analysis-card">
+          <div class="ac-header"><div class="ac-icon bg-cyan">📈</div><h3>Peningkatan Kualitas Asesmen</h3></div>
+          <p>Menggunakan bentuk asesmen yang lebih autentik untuk memetakan capaian belajar peserta didik secara lebih akurat.</p>
+        </div>
+        <div class="analysis-card">
+          <div class="ac-header"><div class="ac-icon bg-orange">🔄</div><h3>Refleksi Siklus 2</h3></div>
+          <p>Menilai efektivitas perbaikan yang telah dilakukan dan mengidentifikasi area baru yang masih memerlukan penyempurnaan.</p>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-title"><span class="doc-icon">📄</span> Dokumen Siklus 2</div>
+        <hr class="dashed-divider" />
+        <div class="pdf-container pdf-landscape">
+          <div class="pdf-placeholder"><span class="ph-icon">🚀</span><p>Dokumen Siklus 2 akan ditampilkan di sini.</p></div>
+        </div>
+        <div class="pdf-actions">
+          <a href="#" download class="btn-modern btn-sub"><span>Unduh File</span></a>
+          <a href="#" target="_blank" class="btn-modern btn-main"><span>Buka Penuh</span></a>
+        </div>
+      </div>
+
+      <!-- VIDEO PEMBELAJARAN SIKLUS 2 -->
+      <div class="video-showcase-card">
+        <div class="video-showcase-header">
+          <span class="vsh-icon">🎬</span>
+          <h3>Video Pembelajaran Praktik Mengajar Mandiri Siklus 2</h3>
+        </div>
+        <div class="video-showcase-grid">
+          <div class="video-player-pane">
+            <div class="video-player-wrap">
+              <div class="video-player-placeholder">
+                <div class="video-play-btn">▶</div>
+                <p><strong>Video Rekaman Pembelajaran Siklus 2</strong><br><small>(Klik untuk memutar / tautan video)</small></p>
+              </div>
+            </div>
+            <div class="video-caption">
+              <span>📹</span> Video Pelaksanaan Pembelajaran Siklus 2 — Model Problem-Based Learning di SMA Negeri 1 Karangnongko
+            </div>
+          </div>
+          <div class="video-desc-pane">
+            <span class="video-desc-badge">Refleksi Pembelajaran Siklus 2</span>
+            <h4>Kekuatan & Peluang Bangsa Indonesia di Tingkat Dunia</h4>
+            <p>Pembelajaran diawali dengan pertanyaan pemantik di papan tulis: <em>"Jika kalian memperkenalkan Indonesia kepada teman dari negara lain, kekuatan apa yang paling ingin kalian tonjolkan?"</em> yang berhasil memantik rasa bangga dan keingintahuan murid terhadap potensi strategis bangsa.</p>
+            <ul class="video-key-points">
+              <li><span class="vk-bullet">✔</span><div><strong>Alur Kegiatan:</strong> Menggunakan sintaks <em>Problem-Based Learning (PBL)</em> melalui eksplorasi LKS, LKPD mandiri, dan investigasi kelompok 5 bidang strategis (SDA, Budaya, Geografis, Pertahanan, Demografi).</div></li>
+              <li><span class="vk-bullet">✔</span><div><strong>Capaian Keberhasilan:</strong> Setiap kelompok bertanggung jawab atas bidangnya masing-masing serta berani dan lancar mempresentasikan kaitan kekuatan bangsa dengan nilai Pancasila.</div></li>
+              <li><span class="vk-bullet">💡</span><div><strong>Tindak Lanjut & Evaluasi:</strong> Menetapkan peran spesifik bagi tiap anggota (pembaca, pencatat, penyaji, penanya) dan memperkaya bahan ajar dengan data visual agar analisis lebih mendalam.</div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- GALLERY DOKUMENTASI -->
+      <div class="gallery-title">
+        <h3>Dokumentasi Kegiatan PPL</h3>
+      </div>
+      <div class="gallery-masonry">
+        <div class="gallery-item gi-1">
+          <span class="ph-icon">📸</span>
+          <p>Dokumentasi Kegiatan 1</p>
+        </div>
+        <div class="gallery-item gi-2">
+          <span class="ph-icon">👥</span>
+          <p>Interaksi Siswa</p>
+        </div>
+        <div class="gallery-item gi-3">
+          <span class="ph-icon">📝</span>
+          <p>Aktivitas Belajar</p>
+        </div>
+        <div class="gallery-item gi-4">
+          <span class="ph-icon">🏫</span>
+          <p>Dokumentasi Kelas Keseluruhan</p>
+        </div>
+        <div class="gallery-item gi-5">
+          <span class="ph-icon">🖼️</span>
+          <p>Hasil Karya</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TAB: SIKLUS 3 ===================== -->
+    <section id="tab-siklus3" class="tab-content">
+      <div class="section-title">
+        <h2>Praktik Pembelajaran Mandiri <span class="text-gradient">Siklus 3</span></h2>
+        <p>Penguatan kemampuan adaptasi mengajar dengan memfasilitasi keberagaman kebutuhan belajar peserta didik di kelas.</p>
+      </div>
+      <div class="analysis-grid">
+        <div class="analysis-card">
+          <div class="ac-header"><div class="ac-icon bg-blue">🧩</div><h3>Desain Diferensiasi</h3></div>
+          <p>Merancang pembelajaran yang mengakomodasi perbedaan kesiapan, minat, dan profil belajar peserta didik melalui diferensiasi konten, proses, maupun produk.</p>
+        </div>
+        <div class="analysis-card">
+          <div class="ac-header"><div class="ac-icon bg-purple">🎭</div><h3>Manajemen Kelas Dinamis</h3></div>
+          <p>Mengelola transisi antar kegiatan dan pembagian kelompok belajar dengan lebih efektif agar waktu pembelajaran termanfaatkan secara optimal.</p>
+        </div>
+        <div class="analysis-card">
+          <div class="ac-header"><div class="ac-icon bg-cyan">🗣️</div><h3>Fasilitasi Interaksi</h3></div>
+          <p>Mendorong terjadinya diskusi kritis dan kolaborasi antar peserta didik untuk membangun keterampilan komunikasi dan kerja sama.</p>
+        </div>
+        <div class="analysis-card">
+          <div class="ac-header"><div class="ac-icon bg-orange">🔄</div><h3>Refleksi Siklus 3</h3></div>
+          <p>Mengevaluasi tingkat keberhasilan penerapan pembelajaran berdiferensiasi dan respons peserta didik terhadap strategi tersebut.</p>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-title"><span class="doc-icon">📄</span> Dokumen Siklus 3</div>
+        <hr class="dashed-divider" />
+        <div class="pdf-container pdf-landscape">
+          <div class="pdf-placeholder"><span class="ph-icon">💡</span><p>Dokumen Siklus 3 akan ditampilkan di sini.</p></div>
+        </div>
+        <div class="pdf-actions">
+          <a href="#" download class="btn-modern btn-sub"><span>Unduh File</span></a>
+          <a href="#" target="_blank" class="btn-modern btn-main"><span>Buka Penuh</span></a>
+        </div>
+      </div>
+
+      <!-- VIDEO PEMBELAJARAN SIKLUS 3 -->
+      <div class="video-showcase-card">
+        <div class="video-showcase-header">
+          <span class="vsh-icon">🎬</span>
+          <h3>Video Pembelajaran Praktik Mengajar Mandiri Siklus 3</h3>
+        </div>
+        <div class="video-showcase-grid">
+          <div class="video-player-pane">
+            <div class="video-player-wrap">
+              <div class="video-player-placeholder">
+                <div class="video-play-btn">▶</div>
+                <p><strong>Video Rekaman Pembelajaran Siklus 3</strong><br><small>(Klik untuk memutar / tautan video)</small></p>
+              </div>
+            </div>
+            <div class="video-caption">
+              <span>📹</span> Video Pelaksanaan Pembelajaran Siklus 3 — Media Ular Tangga SWOT di SMA Negeri 1 Karangnongko
+            </div>
+          </div>
+          <div class="video-desc-pane">
+            <span class="video-desc-badge">Refleksi Pembelajaran Siklus 3</span>
+            <h4>Analisis Kelemahan & Ancaman Bangsa melalui Ular Tangga SWOT</h4>
+            <p>Apersepsi diawali dengan mendiskusikan tantangan terbesar kemajuan Indonesia (korupsi, kesenjangan antardaerah, ancaman ideologi, perubahan iklim), yang kemudian dipadukan secara inovatif dengan media edukasi interaktif <strong>Papan Ular Tangga SWOT</strong>.</p>
+            <ul class="video-key-points">
+              <li><span class="vk-bullet">✔</span><div><strong>Alur Kegiatan:</strong> Pembelajaran gamifikasi di mana Kartu Tangga mengkaji kekuatan/peluang dan Kartu Ular mendalami kelemahan/ancaman bangsa, disertai LKPD pencatat solusi kelompok.</div></li>
+              <li><span class="vk-bullet">✔</span><div><strong>Capaian Keberhasilan:</strong> Permainan edukatif mencairkan suasana kelas XII, mengubah materi analitis yang berat menjadi dinamis dan menyenangkan, serta memantik tawa dan diskusi antarmurid.</div></li>
+              <li><span class="vk-bullet">💡</span><div><strong>Tindak Lanjut & Evaluasi:</strong> Menjaga kelompok tetap kecil (maksimal 4 siswa per papan) dengan aturan tugas bergilir pada setiap lemparan dadu agar tidak ada siswa yang pasif.</div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- GALLERY DOKUMENTASI -->
+      <div class="gallery-title">
+        <h3>Dokumentasi Kegiatan PPL</h3>
+      </div>
+      <div class="gallery-masonry">
+        <div class="gallery-item gi-1">
+          <span class="ph-icon">📸</span>
+          <p>Dokumentasi Kegiatan 1</p>
+        </div>
+        <div class="gallery-item gi-2">
+          <span class="ph-icon">👥</span>
+          <p>Interaksi Siswa</p>
+        </div>
+        <div class="gallery-item gi-3">
+          <span class="ph-icon">📝</span>
+          <p>Aktivitas Belajar</p>
+        </div>
+        <div class="gallery-item gi-4">
+          <span class="ph-icon">🏫</span>
+          <p>Dokumentasi Kelas Keseluruhan</p>
+        </div>
+        <div class="gallery-item gi-5">
+          <span class="ph-icon">🖼️</span>
+          <p>Hasil Karya</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TAB: SIKLUS 4 ===================== -->
+    <section id="tab-siklus4" class="tab-content">
+      <div class="section-title">
+        <h2>Praktik Pembelajaran Mandiri <span class="text-gradient">Siklus 4</span></h2>
+        <p>Puncak pengalaman mengajar mandiri dengan menampilkan performa terbaik dari akumulasi refleksi siklus-siklus sebelumnya.</p>
+      </div>
+      <div class="analysis-grid">
+        <div class="analysis-card">
+          <div class="ac-header"><div class="ac-icon bg-blue">🌟</div><h3>Performa Optimal</h3></div>
+          <p>Menampilkan penguasaan kelas yang matang, kepercayaan diri tinggi, serta penyampaian materi yang sistematis dan mudah dipahami.</p>
+        </div>
+        <div class="analysis-card">
+          <div class="ac-header"><div class="ac-icon bg-purple">💻</div><h3>Integrasi Teknologi</h3></div>
+          <p>Memanfaatkan media pembelajaran digital dan alat bantu interaktif untuk menciptakan pengalaman belajar yang menarik dan relevan.</p>
+        </div>
+        <div class="analysis-card">
+          <div class="ac-header"><div class="ac-icon bg-cyan">🎯</div><h3>Pencapaian Tujuan Belajar</h3></div>
+          <p>Memastikan mayoritas peserta didik mampu mencapai indikator kompetensi yang ditetapkan melalui evaluasi yang komprehensif.</p>
+        </div>
+        <div class="analysis-card">
+          <div class="ac-header"><div class="ac-icon bg-orange">🔄</div><h3>Refleksi Akhir Siklus</h3></div>
+          <p>Menyimpulkan seluruh perkembangan kompetensi pedagogik selama pelaksanaan Praktik Pembelajaran Mandiri secara keseluruhan.</p>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-title"><span class="doc-icon">📄</span> Dokumen Siklus 4</div>
+        <hr class="dashed-divider" />
+        <div class="pdf-container pdf-landscape">
+          <div class="pdf-placeholder"><span class="ph-icon">🎯</span><p>Dokumen Siklus 4 akan ditampilkan di sini.</p></div>
+        </div>
+        <div class="pdf-actions">
+          <a href="#" download class="btn-modern btn-sub"><span>Unduh File</span></a>
+          <a href="#" target="_blank" class="btn-modern btn-main"><span>Buka Penuh</span></a>
+        </div>
+      </div>
+
+      <!-- VIDEO PEMBELAJARAN SIKLUS 4 -->
+      <div class="video-showcase-card">
+        <div class="video-showcase-header">
+          <span class="vsh-icon">🎬</span>
+          <h3>Video Pembelajaran Praktik Mengajar Mandiri Siklus 4</h3>
+        </div>
+        <div class="video-showcase-grid">
+          <div class="video-player-pane">
+            <div class="video-player-wrap">
+              <div class="video-player-placeholder">
+                <div class="video-play-btn">▶</div>
+                <p><strong>Video Rekaman Pembelajaran Siklus 4</strong><br><small>(Klik untuk memutar / tautan video)</small></p>
+              </div>
+            </div>
+            <div class="video-caption">
+              <span>📹</span> Video Pelaksanaan Pembelajaran Siklus 4 — Proyek Gelar Karya Poster di SMA Negeri 1 Karangnongko
+            </div>
+          </div>
+          <div class="video-desc-pane">
+            <span class="video-desc-badge">Refleksi Pembelajaran Siklus 4</span>
+            <h4>Gelar Karya Poster Analisis SWOT & Aksi Nyata Peluang Bangsa</h4>
+            <p>Puncak praktik mengajar mandiri memfokuskan murid pada perumusan aksi nyata atas peluang strategis bangsa Indonesia (pariwisata bahari kelas dunia, posisi jalur perdagangan maritim, dan ekonomi kreatif) yang diwujudkan melalui proyek pembuatan poster infografis.</p>
+            <ul class="video-key-points">
+              <li><span class="vk-bullet">✔</span><div><strong>Alur Kegiatan:</strong> Mengadopsi <em>Project-Based Learning (PjBL)</em> di mana kelompok berkolaborasi menyusun 4 kuadran analisis SWOT lengkap dengan rekomendasi tindakan berbasis nilai Pancasila.</div></li>
+              <li><span class="vk-bullet">✔</span><div><strong>Capaian Keberhasilan:</strong> Murid tampil percaya diri memamerkan poster kreatif hasil karyanya, membuktikan kemampuan sintesis materi dan kebanggaan sebagai warga negara Indonesia.</div></li>
+              <li><span class="vk-bullet">💡</span><div><strong>Tindak Lanjut & Evaluasi:</strong> Memberikan kriteria isi minimal sejak awal kegiatan dan mempertegas pembagian peran tim agar keseimbangan antara estetika poster dan kedalaman isi tetap optimal.</div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- GALLERY DOKUMENTASI -->
+      <div class="gallery-title">
+        <h3>Dokumentasi Kegiatan PPL</h3>
+      </div>
+      <div class="gallery-masonry">
+        <div class="gallery-item gi-1">
+          <span class="ph-icon">📸</span>
+          <p>Dokumentasi Kegiatan 1</p>
+        </div>
+        <div class="gallery-item gi-2">
+          <span class="ph-icon">👥</span>
+          <p>Interaksi Siswa</p>
+        </div>
+        <div class="gallery-item gi-3">
+          <span class="ph-icon">📝</span>
+          <p>Aktivitas Belajar</p>
+        </div>
+        <div class="gallery-item gi-4">
+          <span class="ph-icon">🏫</span>
+          <p>Dokumentasi Kelas Keseluruhan</p>
+        </div>
+        <div class="gallery-item gi-5">
+          <span class="ph-icon">🖼️</span>
+          <p>Hasil Karya</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TAB: UTS PPL ===================== -->
+    <section id="tab-uts" class="tab-content">
+      <div class="section-title">
+        <h2>Ujian Tengah Semester <span class="text-gradient">PPL</span></h2>
+        <p>Evaluasi paruh waktu pelaksanaan PPL untuk mengukur perkembangan dan ketercapaian kompetensi mahasiswa calon guru.</p>
+      </div>
+      <div class="scouting-grid">
+        <div class="scout-card">
+          <div class="scout-header bg-gradient-blue">
+            <span class="scout-icon">📋</span>
+            <h3>Persiapan Ujian</h3>
+          </div>
+          <div class="scout-body">
+            <ul class="scout-list">
+              <li><span class="s-icon">✅</span><div><strong>Penyusunan Portofolio:</strong><span>Mengumpulkan dan menyusun seluruh perangkat serta dokumentasi pembelajaran siklus awal.</span></div></li>
+              <li><span class="s-icon">✅</span><div><strong>Konsultasi:</strong><span>Berdiskusi intensif dengan DPL dan Guru Pamong terkait persiapan materi evaluasi.</span></div></li>
+            </ul>
+          </div>
+          <div class="scout-footer"><span class="scout-tag">Tahap Pra-Ujian</span></div>
+        </div>
+        <div class="scout-card">
+          <div class="scout-header bg-gradient-purple">
+            <span class="scout-icon">🎥</span>
+            <h3>Pelaksanaan Ujian</h3>
+          </div>
+          <div class="scout-body">
+            <ul class="scout-list">
+              <li><span class="s-icon">✅</span><div><strong>Praktik Mengajar:</strong><span>Melaksanakan pembelajaran yang dinilai langsung oleh tim penguji.</span></div></li>
+              <li><span class="s-icon">✅</span><div><strong>Wawancara Reflektif:</strong><span>Memaparkan rasionalitas pengambilan keputusan pedagogik saat mengajar.</span></div></li>
+            </ul>
+          </div>
+          <div class="scout-footer"><span class="scout-tag">Tahap Pelaksanaan</span></div>
+        </div>
+        <div class="scout-card">
+          <div class="scout-header bg-gradient-cyan">
+            <span class="scout-icon">📊</span>
+            <h3>Hasil & Umpan Balik</h3>
+          </div>
+          <div class="scout-body">
+            <ul class="scout-list">
+              <li><span class="s-icon">✅</span><div><strong>Catatan Penguji:</strong><span>Menerima dan menganalisis masukan konstruktif dari tim penilai.</span></div></li>
+              <li><span class="s-icon">✅</span><div><strong>Rencana Perbaikan:</strong><span>Menyusun strategi tindak lanjut untuk sisa waktu pelaksanaan PPL.</span></div></li>
+            </ul>
+          </div>
+          <div class="scout-footer"><span class="scout-tag">Tahap Pasca-Ujian</span></div>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-title"><span class="doc-icon">📄</span> Dokumen UTS PPL</div>
+        <hr class="dashed-divider" />
+        <div class="pdf-container">
+          <div class="pdf-placeholder"><span class="ph-icon">📋</span><p>Dokumen UTS PPL akan ditampilkan di sini.</p></div>
+        </div>
+        <div class="pdf-actions">
+          <a href="#" download class="btn-modern btn-sub"><span>Unduh File</span></a>
+          <a href="#" target="_blank" class="btn-modern btn-main"><span>Buka Penuh</span></a>
+        </div>
+      </div>
+
+      <!-- VIDEO PEMBELAJARAN UTS PPL -->
+      <div class="video-showcase-card">
+        <div class="video-showcase-header">
+          <span class="vsh-icon">🎬</span>
+          <h3>Video Pembelajaran Praktik Mengajar Ujian Tengah Semester PPL</h3>
+        </div>
+        <div class="video-showcase-grid">
+          <div class="video-player-pane">
+            <div class="video-player-wrap">
+              <div class="video-player-placeholder">
+                <div class="video-play-btn">▶</div>
+                <p><strong>Video Rekaman Ujian Tengah Semester PPL</strong><br><small>(Klik untuk memutar / tautan video)</small></p>
+              </div>
+            </div>
+            <div class="video-caption">
+              <span>📹</span> Video Praktik Mengajar Ujian Tengah Semester PPL di SMA Negeri 1 Karangnongko
+            </div>
+          </div>
+          <div class="video-desc-pane">
+            <span class="video-desc-badge">Ujian Tengah Semester PPL</span>
+            <h4>Praktik Mengajar & Ujian Kinerja Tengah Semester</h4>
+            <p>Pelaksanaan ujian kinerja praktik mengajar paruh waktu di <strong>SMA Negeri 1 Karangnongko</strong> yang dinilai langsung oleh Guru Pamong dan Dosen Pembimbing Lapangan untuk mengukur ketercapaian kompetensi pedagogik serta kesiapan mengajar mandiri.</p>
+            <ul class="video-key-points">
+              <li><span class="vk-bullet">✔</span><div><strong>Pelaksanaan Ujian Kinerja:</strong> Menampilkan penguasaan materi, pengelolaan kelas, dan interaksi pembelajaran aktif berbasis nilai Pancasila.</div></li>
+              <li><span class="vk-bullet">✔</span><div><strong>Wawancara Reflektif:</strong> Mempertanggungjawabkan rasionalitas dan keputusan pedagogik yang diambil selama proses pembelajaran di hadapan tim penguji.</div></li>
+              <li><span class="vk-bullet">💡</span><div><strong>Umpan Balik & Evaluasi:</strong> Menerima catatan konstruktif dari tim penilai sebagai pijakan perbaikan strategi mengajar untuk siklus mandiri berikutnya.</div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TAB: UAS PPL ===================== -->
+    <section id="tab-uas" class="tab-content">
+      <div class="section-title">
+        <h2>Ujian Akhir Semester <span class="text-gradient">PPL</span></h2>
+        <p>Penilaian akhir untuk mengukur kesiapan dan kelayakan mahasiswa sebagai pendidik profesional setelah menyelesaikan seluruh rangkaian PPL.</p>
+      </div>
+      <div class="scouting-grid">
+        <div class="scout-card">
+          <div class="scout-header bg-gradient-blue">
+            <span class="scout-icon">🏆</span>
+            <h3>Persiapan Akhir</h3>
+          </div>
+          <div class="scout-body">
+            <ul class="scout-list">
+              <li><span class="s-icon">✅</span><div><strong>Finalisasi Dokumen:</strong><span>Menyelesaikan seluruh kelengkapan administrasi dan laporan akhir PPL.</span></div></li>
+              <li><span class="s-icon">✅</span><div><strong>Latihan Mengajar:</strong><span>Mematangkan skenario pembelajaran terbaik untuk ditampilkan pada ujian akhir.</span></div></li>
+            </ul>
+          </div>
+          <div class="scout-footer"><span class="scout-tag">Tahap Pra-Ujian</span></div>
+        </div>
+        <div class="scout-card">
+          <div class="scout-header bg-gradient-purple">
+            <span class="scout-icon">👨‍🏫</span>
+            <h3>Ujian Kinerja</h3>
+          </div>
+          <div class="scout-body">
+            <ul class="scout-list">
+              <li><span class="s-icon">✅</span><div><strong>Demonstrasi Kompetensi:</strong><span>Menampilkan penguasaan utuh terhadap kompetensi pedagogik, profesional, dan sosial kepribadian.</span></div></li>
+              <li><span class="s-icon">✅</span><div><strong>Respons Situasional:</strong><span>Menunjukkan kemampuan menangani situasi tak terduga di kelas secara profesional.</span></div></li>
+            </ul>
+          </div>
+          <div class="scout-footer"><span class="scout-tag">Tahap Pelaksanaan</span></div>
+        </div>
+        <div class="scout-card">
+          <div class="scout-header bg-gradient-cyan">
+            <span class="scout-icon">📈</span>
+            <h3>Refleksi Komprehensif</h3>
+          </div>
+          <div class="scout-body">
+            <ul class="scout-list">
+              <li><span class="s-icon">✅</span><div><strong>Evaluasi Diri:</strong><span>Memaparkan transformasi diri sejak awal masa PPL hingga ujian akhir.</span></div></li>
+              <li><span class="s-icon">✅</span><div><strong>Proyeksi Masa Depan:</strong><span>Menyampaikan komitmen untuk terus mengembangkan diri pasca kelulusan program PPG.</span></div></li>
+            </ul>
+          </div>
+          <div class="scout-footer"><span class="scout-tag">Tahap Evaluasi</span></div>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-title"><span class="doc-icon">📄</span> Dokumen UAS PPL</div>
+        <hr class="dashed-divider" />
+        <div class="pdf-container">
+          <div class="pdf-placeholder"><span class="ph-icon">🏆</span><p>Dokumen UAS PPL akan ditampilkan di sini.</p></div>
+        </div>
+        <div class="pdf-actions">
+          <a href="#" download class="btn-modern btn-sub"><span>Unduh File</span></a>
+          <a href="#" target="_blank" class="btn-modern btn-main"><span>Buka Penuh</span></a>
+        </div>
+      </div>
+
+      <!-- VIDEO PEMBELAJARAN UAS PPL -->
+      <div class="video-showcase-card">
+        <div class="video-showcase-header">
+          <span class="vsh-icon">🎬</span>
+          <h3>Video Pembelajaran Praktik Mengajar Ujian Akhir Semester PPL</h3>
+        </div>
+        <div class="video-showcase-grid">
+          <div class="video-player-pane">
+            <div class="video-player-wrap">
+              <div class="video-player-placeholder">
+                <div class="video-play-btn">▶</div>
+                <p><strong>Video Rekaman Ujian Akhir Semester PPL</strong><br><small>(Klik untuk memutar / tautan video)</small></p>
+              </div>
+            </div>
+            <div class="video-caption">
+              <span>📹</span> Video Praktik Mengajar Ujian Akhir Semester PPL di SMA Negeri 1 Karangnongko
+            </div>
+          </div>
+          <div class="video-desc-pane">
+            <span class="video-desc-badge">Ujian Akhir Semester PPL</span>
+            <h4>Praktik Mengajar & Ujian Kinerja Akhir Semester</h4>
+            <p>Puncak evaluasi unjuk kerja praktik pembelajaran mandiri di <strong>SMA Negeri 1 Karangnongko</strong> sebagai pembuktian kelayakan dan kesiapan utuh sebagai pendidik profesional yang mengintegrasikan kompetensi pedagogik, kepribadian, sosial, dan profesional.</p>
+            <ul class="video-key-points">
+              <li><span class="vk-bullet">✔</span><div><strong>Demonstrasi Kompetensi:</strong> Menampilkan performa terbaik dalam penguasaan kelas yang matang, penyampaian materi sistematis, dan integrasi media inovatif.</div></li>
+              <li><span class="vk-bullet">✔</span><div><strong>Respons Situasional:</strong> Menunjukkan kemampuan tanggap dan adaptif dalam mengelola dinamika kelas serta kebutuhan belajar peserta didik secara profesional.</div></li>
+              <li><span class="vk-bullet">💡</span><div><strong>Refleksi Komprehensif:</strong> Memaparkan transformasi diri dan komitmen berkelanjutan pasca kelulusan program PPG Prajabatan.</div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ANALISIS & REFLEKSI (OPTIONAL/BOTTOM) ===================== -->
+    <hr class="section-divider" />
+    <section id="refleksi-ppl">
+      <div class="section-title" style="margin-bottom: 56px;">
+        <h2 style="font-size: clamp(1.8rem, 4vw, 2.5rem);">Jejak Refleksi<br><span class="text-gradient">Praktik Lapangan</span></h2>
+        <p>Intisari pembelajaran berharga yang diperoleh dari interaksi langsung dengan ekosistem sekolah selama masa praktik.</p>
+      </div>
+      <div class="zigzag-section">
+        <div class="zigzag-row">
+          <div class="zz-visual"><div class="zz-card-3d bg-blue-glow"><div class="zz-inner">🤝</div></div></div>
+          <div class="zz-content">
+            <div class="zz-number">A</div>
+            <h3>Refleksi Siklus 1: Pembelajaran Kontekstual & Nilai Hidup Pancasila</h3>
+            <p>Mengawali praktik mengajar di <strong>SMA Negeri 1 Karangnongko</strong> dengan tradisi gotong royong nusantara (<em>Marakka'bola, Sinoman, Ngayah</em>) serta tradisi lokal (<em>sambatan, rewang</em>) membuktikan bahwa nilai Pancasila paling bermakna ketika digali dari realitas hidup murid. Penerapan sintaks <em>Think-Pair-Share</em> menumbuhkan kemandirian berpikir sebelum berdiskusi, dengan catatan evaluatif perlunya pertanyaan pemantik penuntun yang merangsang argumentasi mendalam serta pemerataan partisipasi murid pendiam.</p>
+          </div>
+        </div>
+        <div class="zigzag-row reverse">
+          <div class="zz-visual"><div class="zz-card-3d bg-purple-glow"><div class="zz-inner">🌐</div></div></div>
+          <div class="zz-content">
+            <div class="zz-number">B</div>
+            <h3>Refleksi Siklus 2: Berpikir Kritis & Eksplorasi Peluang Global Bangsa</h3>
+            <p>Pertanyaan pemantik mengenai kebanggaan memperkenalkan Indonesia memantik kesadaran kritis peserta didik terhadap 5 bidang kekuatan strategis bangsa (SDA, budaya, geografis, pertahanan, dan demografi). Model <em>Problem-Based Learning (PBL)</em> berhasil membangun tanggung jawab kelompok dalam menganalisis kaitan potensi nasional dengan nilai Pancasila di panggung dunia, disertai evaluasi perbaikan pada penetapan peran anggota yang terstruktur agar diskusi ilmiah berjalan lebih inklusif.</p>
+          </div>
+        </div>
+        <div class="zigzag-row">
+          <div class="zz-visual"><div class="zz-card-3d bg-orange-glow"><div class="zz-inner">🎲</div></div></div>
+          <div class="zz-content">
+            <div class="zz-number">C</div>
+            <h3>Refleksi Siklus 3: Gamifikasi Edukatif melalui Papan Ular Tangga SWOT</h3>
+            <p>Mengubah materi analisis kelemahan dan ancaman bangsa yang kompleks menjadi dinamis melalui media permainan edukasi <em>Ular Tangga SWOT</em>. Kartu Tangga (kekuatan & peluang) dan Kartu Ular (kelemahan & ancaman) terbukti mencairkan suasana belajar kelas XII, melatih kerja sama tim, dan membangkitkan keberanian siswa dalam mendiskusikan tantangan kebangsaan seperti korupsi dan kesenjangan secara solutif dan menyenangkan.</p>
+          </div>
+        </div>
+        <div class="zigzag-row reverse">
+          <div class="zz-visual"><div class="zz-card-3d bg-cyan-glow"><div class="zz-inner">🎨</div></div></div>
+          <div class="zz-content">
+            <div class="zz-number">D</div>
+            <h3>Refleksi Siklus 4: Proyek Gelar Karya Poster & Aksi Nyata Peluang Bangsa</h3>
+            <p>Puncak siklus melalui model <em>Project-Based Learning (PjBL)</em> memfasilitasi peserta didik merumuskan tindakan nyata pemanfaatan peluang maritim dan pariwisata dunia dalam bentuk poster infografis SWOT. Gelar karya ini menumbuhkan kebanggaan belajar dan komitmen kebangsaan nyata, sekaligus menandai transformasi kompetensi pedagogik serta kematangan diri sebagai pendidik Pancasila yang adaptif, reflektif, dan inspiratif.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+
+  <!-- FOOTER -->
+  <footer class="footer-new">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <img src="unwidha_logo.png" alt="Logo Unwidha" class="footer-logo-img" />
+            <span class="footer-brand-name"><span class="fb-eporto">E-Portofolio</span><span class="fb-ppg"> PPG</span></span>
+          </div>
+          <p class="footer-desc">Portal resmi dokumentasi artefak dan refleksi Program Pendidikan Profesi Guru (PPG) Prajabatan bidang studi Pendidikan Pancasila di Universitas Widya Dharma.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/ikdrsptra_/" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/dwikidarmasaputra080502" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">E-Portofolio</h4>
+          <ul class="footer-links">
+            <li><a href="seminar-ppg.html">Refleksi PPG Semester 1</a></li>
+            <li><a href="seminar-ppg-2.html">Refleksi PPG Semester 2</a></li>
+            <li><a href="ppl.html">Praktik Pengalaman Lapangan (PPL)</a></li>
+            <li><a href="seminar-ppg-3.html">Seminar PPG</a></li>
+            <li><a href="artefak-produk.html">Artefak Produk</a></li>
+            <li><a href="penilaian-gp.html">Penilaian GP</a></li>
+            <li><a href="model-guru.html">Model Guru</a></li>
+            <li><a href="refleksi.html">Refleksi Akhir</a></li>
+            <li><a href="filosofi-mengajar.html">Filosofi Mengajar</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">LPTK Kami</h4>
+          <a href="https://maps.app.goo.gl/tfwrJ8PoLEfRgoeG6" target="_blank" rel="noopener" class="footer-lptk-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Universitas Widya Dharma
+          </a>
+          <div class="footer-map-embed">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.697!2d110.6047!3d-7.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a3c1b3e000001%3A0x1!2sUniversitas+Widya+Dharma+Klaten!5e0!3m2!1sid!2sid!4v1" width="100%" height="140" style="border:0; border-radius:10px; opacity:.85;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 E-Portofolio PPG Prajabatan Pendidikan Pancasila | Dwiki Darma Saputra</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function openTab(evt, tabId) {
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      const tabEl = document.getElementById(tabId);
+      if (tabEl) tabEl.classList.add('active');
+      if (evt && evt.currentTarget) {
+        evt.currentTarget.classList.add('active');
+      } else {
+        document.querySelectorAll('.tab-btn').forEach(b => {
+          if (b.getAttribute('data-tab') === tabId) b.classList.add('active');
+        });
+      }
+      history.replaceState(null, null, '#' + tabId.replace('tab-', ''));
+    }
+
+    function initTabFromHash() {
+      const hash = window.location.hash.replace('#', '');
+            const tabMap = {
+        'observasi': 'tab-observasi',
+        'siklus1': 'tab-siklus1',
+        'siklus2': 'tab-siklus2',
+        'siklus3': 'tab-siklus3',
+        'siklus4': 'tab-siklus4',
+        'uts': 'tab-uts',
+        'uas': 'tab-uas'
+      };
+      const targetTab = tabMap[hash];
+      if (targetTab) { openTab(null, targetTab); }
+    }
+
+    document.addEventListener('DOMContentLoaded', initTabFromHash);
+    window.addEventListener('hashchange', initTabFromHash);
+  </script>
+
+</body>
+</html>

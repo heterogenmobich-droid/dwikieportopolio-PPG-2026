@@ -1,0 +1,813 @@
+/* ===== PROFIL PAGE – Redesigned ===== */
+
+/* ─── Hero Section ─── */
+.profil-hero {
+  position: relative;
+  padding: 160px 0 100px;
+  background: linear-gradient(135deg, #f0f4ff 0%, #eef0ff 40%, #f5f0ff 70%, #faf5ff 100%);
+  overflow: hidden;
+}
+
+.profil-hero::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124,58,237,.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.profil-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -40px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99,102,241,.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.profil-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 60% at 30% 30%, rgba(124,58,237,.07), transparent),
+    radial-gradient(ellipse 40% 50% at 80% 80%, rgba(99,102,241,.05), transparent);
+  pointer-events: none;
+}
+
+.profil-hero-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 72px;
+}
+
+/* ── Photo column ── */
+.profil-photo-col {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-shrink: 0;
+}
+
+/* ── Social sidebar ── */
+.profil-social-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sidebar-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(124,58,237,.12);
+  color: #6b7280;
+  text-decoration: none;
+  transition: all .3s cubic-bezier(.4,0,.2,1);
+}
+
+.sidebar-social-btn:hover {
+  background: var(--purple-main);
+  border-color: var(--purple-main);
+  color: #ffffff;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(124,58,237,.35);
+}
+
+/* ── Photo frame ── */
+.profil-photo-frame {
+  width: 320px;
+  background: linear-gradient(160deg, #2d3a8c 0%, #1e2564 60%, #111842 100%);
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  box-shadow:
+    0 24px 64px rgba(30,37,100,.3),
+    0 0 0 1px rgba(255,255,255,.08) inset;
+  transition: transform .4s cubic-bezier(.4,0,.2,1), box-shadow .4s ease;
+}
+
+.profil-photo-frame:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 32px 80px rgba(30,37,100,.35),
+    0 0 0 1px rgba(255,255,255,.1) inset;
+}
+
+.profil-photo-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.profil-year-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, var(--purple-main), #6366f1);
+  padding: 12px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.badge-year {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.badge-label {
+  font-size: .65rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.8);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+/* ── Info column ── */
+.profil-info-col {
+  flex: 1;
+}
+
+.profil-label {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--purple-main);
+  margin-bottom: 16px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.profil-label::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--purple-main), #6366f1);
+}
+
+.profil-name {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+
+.pn-black {
+  color: #111827;
+}
+
+.pn-purple {
+  color: var(--purple-main);
+  background: linear-gradient(135deg, var(--purple-main), #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.profil-desc {
+  font-size: .95rem;
+  color: var(--gray-600);
+  line-height: 1.8;
+  margin-bottom: 32px;
+  max-width: 440px;
+}
+
+.profil-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #111827;
+  color: #fff;
+  padding: 15px 36px;
+  border-radius: 12px;
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: all .3s cubic-bezier(.4,0,.2,1);
+  position: relative;
+  overflow: hidden;
+}
+
+.profil-contact-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--purple-main), #6366f1);
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.profil-contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(76,29,149,.3);
+}
+
+.profil-contact-btn:hover::before {
+  opacity: 1;
+}
+
+/* ─── Cerita Saya ─── */
+.cerita-section {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.cerita-inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.cerita-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(124,58,237,.06);
+  color: var(--purple-main);
+  border: 1px solid rgba(124,58,237,.15);
+  border-radius: 50px;
+  padding: 6px 18px;
+  font-size: .8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  transition: all .3s ease;
+}
+
+.cerita-badge:hover {
+  background: rgba(124,58,237,.1);
+  transform: translateY(-2px);
+}
+
+.cerita-title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 36px;
+}
+
+.cerita-accent {
+  color: var(--purple-main);
+  background: linear-gradient(135deg, var(--purple-main), #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cerita-text p {
+  font-size: .95rem;
+  line-height: 1.9;
+  color: var(--gray-600);
+  margin-bottom: 20px;
+}
+
+.cerita-text strong {
+  color: #111827;
+  font-weight: 700;
+}
+
+/* ── Asal Daerah Card ── */
+.asal-daerah-card {
+  margin-top: 36px;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0fdfa 100%);
+  border: 1px solid rgba(16,185,129,.15);
+  border-radius: 20px;
+  padding: 28px 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  transition: all .3s ease;
+}
+
+.asal-daerah-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(16,185,129,.1);
+}
+
+.asal-daerah-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.4rem;
+}
+
+.asal-daerah-content h4 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #065f46;
+  margin-bottom: 8px;
+}
+
+.asal-daerah-content p {
+  font-size: .88rem;
+  line-height: 1.75;
+  color: #4b5563;
+  margin: 0;
+}
+
+.asal-daerah-content p strong {
+  color: #065f46;
+}
+
+/* ── Quote card ── */
+.cerita-quote-card {
+  margin-top: 44px;
+  background: linear-gradient(135deg, var(--purple-main) 0%, #6366f1 50%, #4f46e5 100%);
+  border-radius: 24px;
+  padding: 40px 36px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cerita-quote-card::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.06);
+}
+
+.cerita-quote-card::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.04);
+}
+
+.quote-mark {
+  font-size: 3rem;
+  color: rgba(255,255,255,.3);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.cerita-quote-card blockquote {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #fff;
+  line-height: 1.8;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.cerita-quote-card blockquote::before {
+  display: none;
+}
+
+.quote-author {
+  font-size: .76rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.6);
+  letter-spacing: 1.5px;
+  margin-top: 18px;
+  text-transform: uppercase;
+}
+
+/* ─── Jejak Pendidikan ─── */
+.edu-section {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #fafbff 0%, #f5f3ff 100%);
+}
+
+.edu-heading {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 900;
+  text-align: center;
+  color: #111827;
+  margin-bottom: 56px;
+}
+
+.edu-accent {
+  color: var(--purple-main);
+  background: linear-gradient(135deg, var(--purple-main), #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.edu-timeline {
+  max-width: 660px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 52px;
+}
+
+.edu-timeline::before {
+  content: '';
+  position: absolute;
+  left: 22px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--purple-main), rgba(167,139,250,.15));
+  border-radius: 2px;
+}
+
+.edu-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  margin-bottom: 36px;
+  position: relative;
+}
+
+.edu-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: absolute;
+  left: -52px;
+  z-index: 2;
+  box-shadow: 0 4px 16px rgba(0,0,0,.12);
+  transition: transform .3s ease;
+}
+
+.edu-item:hover .edu-icon-wrap {
+  transform: scale(1.1);
+}
+
+.edu-icon-wrap.blue {
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: #fff;
+}
+
+.edu-icon-wrap.purple {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #fff;
+}
+
+.edu-icon-wrap.teal {
+  background: linear-gradient(135deg, #0ea5e9, #14b8a6);
+  color: #fff;
+}
+
+.edu-content {
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px 26px;
+  box-shadow: 0 2px 20px rgba(0,0,0,.04);
+  border: 1px solid rgba(124,58,237,.06);
+  flex: 1;
+  transition: all .3s cubic-bezier(.4,0,.2,1);
+}
+
+.edu-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(124,58,237,.1);
+  border-color: rgba(124,58,237,.15);
+}
+
+.edu-year-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--purple-main), #6366f1);
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 800;
+  padding: 4px 16px;
+  border-radius: 20px;
+  letter-spacing: .5px;
+  margin-bottom: 10px;
+}
+
+.edu-inst {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.edu-program {
+  font-size: .86rem;
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+/* ─── Kompetensi & Keahlian ─── */
+.skill-section {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.skill-heading {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 900;
+  text-align: center;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.skill-accent {
+  color: var(--purple-main);
+  background: linear-gradient(135deg, var(--purple-main), #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.skill-sub {
+  font-size: .9rem;
+  color: var(--gray-600);
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.skill-card {
+  background: linear-gradient(135deg, #fafbff, #f5f3ff);
+  border: 2px solid rgba(124,58,237,.06);
+  border-radius: 22px;
+  padding: 36px 26px;
+  text-align: center;
+  transition: all .35s cubic-bezier(.4,0,.2,1);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--purple-main), #6366f1);
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.skill-card:hover {
+  border-color: var(--purple-main);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 56px rgba(124,58,237,.12);
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+}
+
+.skill-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  background: rgba(124,58,237,.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: all .3s ease;
+}
+
+.skill-card:hover .skill-icon-wrap {
+  background: linear-gradient(135deg, var(--purple-main), #6366f1);
+}
+
+.skill-card:hover .skill-icon-wrap svg {
+  stroke: #fff;
+}
+
+.skill-card h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.skill-card p {
+  font-size: .85rem;
+  color: var(--gray-600);
+  line-height: 1.75;
+}
+
+/* ─── Sisi Lain Kehidupan ─── */
+.life-section {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #fafbff 0%, #f5f3ff 100%);
+}
+
+.life-heading {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 900;
+  text-align: center;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.life-accent {
+  color: var(--purple-main);
+  background: linear-gradient(135deg, var(--purple-main), #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.life-sub {
+  font-size: .9rem;
+  color: var(--gray-600);
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.life-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.life-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 36px 26px;
+  text-align: center;
+  border: 1px solid rgba(124,58,237,.06);
+  box-shadow: 0 2px 16px rgba(0,0,0,.03);
+  transition: all .35s cubic-bezier(.4,0,.2,1);
+  position: relative;
+  overflow: hidden;
+}
+
+.life-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--purple-main), #6366f1);
+  transform: scaleX(0);
+  transition: transform .3s ease;
+}
+
+.life-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(124,58,237,.12);
+  border-color: var(--purple-light);
+}
+
+.life-card:hover::after {
+  transform: scaleX(1);
+}
+
+.life-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: rgba(124,58,237,.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  transition: all .3s ease;
+}
+
+.life-card:hover .life-icon {
+  background: linear-gradient(135deg, var(--purple-main), #6366f1);
+}
+
+.life-card:hover .life-icon svg {
+  stroke: #fff;
+}
+
+.life-card h3 {
+  font-size: .95rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.life-card p {
+  font-size: .85rem;
+  color: var(--gray-600);
+  line-height: 1.75;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .skill-grid,
+  .life-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .profil-hero {
+    padding: 130px 0 60px;
+  }
+
+  .profil-hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profil-photo-col {
+    flex-direction: column;
+  }
+
+  .profil-social-sidebar {
+    flex-direction: row;
+  }
+
+  .profil-photo-frame {
+    width: 260px;
+  }
+
+  .profil-info-col {
+    text-align: center;
+  }
+
+  .profil-label::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .profil-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .profil-name {
+    font-size: 2.4rem;
+  }
+
+  .skill-grid,
+  .life-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .edu-timeline {
+    padding-left: 40px;
+  }
+
+  .edu-icon-wrap {
+    left: -40px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .edu-timeline::before {
+    left: 16px;
+  }
+
+  .asal-daerah-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .cerita-text p:first-child::first-letter {
+    float: none;
+    margin-right: 0;
+    display: inline;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+  }
+}
